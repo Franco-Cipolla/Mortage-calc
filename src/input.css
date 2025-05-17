@@ -1,1 +1,43 @@
 @import "tailwindcss";
+@theme{
+    --font-PlusJakartaSans: 'Plus Jakarta Sans', sans-serif;
+
+    --color-lime: hsl(61, 70%, 52%);
+    --color-red: hsl(4, 69%, 50%);
+
+    --color-white: hsl(0, 0%, 100%);
+    --color-slate-100: hsl(202, 86%, 94%);
+    --color-slate-300: hsl(203, 41%, 72%);
+    --color-slate-500: hsl(200, 26%, 54%);
+    --color-slate-700: hsl(200, 24%, 40%);
+    --color-slate-900: hsl(202, 55%, 16%);
+
+}
+input[type="radio"].rounded-full {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 1px solid hsl(202, 55%, 16%); /* slate-300 */
+  width: 1rem; /* 20px */
+  height: 1rem; /* 20px */
+  border-radius: 9999px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+input[type="radio"].rounded-full:checked {
+  background-color: #0f172a; /* slate-900 */
+  border-color: #0f172a;
+}
+input[type="radio"].rounded-full:checked::after {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #fff;
+  border-radius: 9999px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
