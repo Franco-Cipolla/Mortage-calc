@@ -2,5 +2,25 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.7",
     "tailwindcss": "^4.1.7"
-  }
+  },
+  "name": "mortage-calc",
+  "version": "1.0.0",
+  "description": "![Design preview for the Mortgage repayment calculator coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Franco-Cipolla/Mortage-calc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Franco-Cipolla/Mortage-calc/issues"
+  },
+  "homepage": "https://github.com/Franco-Cipolla/Mortage-calc#readme"
 }
