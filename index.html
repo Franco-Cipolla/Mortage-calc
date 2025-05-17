@@ -22,13 +22,13 @@
     <title>Frontend Mentor | Mortgage repayment calculator</title>
   </head>
   <body
-    class="flex flex-col md:items-center md:justify-center min-h-screen bg-slate-100 font-PlusJakartaSans"
+    class="flex flex-col  lg:items-center h-screen lg:justify-center bg-slate-900 min-h-screen lg:bg-slate-100 font-PlusJakartaSans"
   >
     <main
-      class="flex flex-col items-center justify-center w-full "
+      class="flex flex-col lg:flex-row items-center justify-center w-full lg:h-52 lg:max-w-7xl  "
     >
-      <div class="bg-white  p-10 w-full">
-        <div class="mb-7">
+      <div class="bg-white flex-1 lg:rounded-l-xl lg:shadow-2xl p-10 lg:py-[38.5px] w-full">
+        <div class="mb-7 flex flex-col lg:flex-row lg:items-center lg:justify-between">
           <h1 class="text-slate-900 text-2xl font-bold mb-1">
             Mortgage Calculator
           </h1>
@@ -58,8 +58,8 @@
             </div>
             <p class="text-sm text-red hidden errP font-semibold">This field is required</p>
           </div>
-          <div class="flex flex-col md:flex-row gap-6 mb-6">
-            <div class="flex flex-col gap-1.5">
+          <div class="flex flex-col w-full items-center  lg:flex-row gap-6 mb-6">
+            <div class="flex flex-col w-full gap-1.5">
               <label for="term" class="text-sm text-slate-700"
                 >Mortgage Term</label
               >
@@ -79,7 +79,7 @@
               <p class="text-sm text-red hidden errP font-semibold">This field is required</p>
             </div>
 
-            <div class="flex flex-col gap-1.5">
+            <div class="flex flex-col w-full gap-1.5">
               <label for="rate" class="text-sm text-slate-700"
                 >Interest Rate</label
               >
@@ -110,7 +110,7 @@
                   id="repayment"
                   class="rounded-full"
                 />
-                <label for="repayment" class="text-md text-slate-900 font-bold"
+                <label for="repayment" class="text-lg text-slate-900 font-bold"
                   >Repayment</label
                 >
               </div>
@@ -125,7 +125,7 @@
                 />
                 <label
                   for="interest-only"
-                  class="text-md text-slate-900 font-bold"
+                  class="text-lg text-slate-900 font-bold"
                   >Interest Only</label
                 >
               </div>
@@ -136,11 +136,11 @@
             <img
               src="assets/images/icon-calculator.svg"
               alt="Calc"
-              class="absolute top-4 left-18"
+              class="absolute top-4 left-18 lg:top-2.5 lg:left-14"
             />
             <button
               type="submit"
-              class="w-full bg-lime py-3.5 px-2 hover:bg-lime/55 rounded-full cursor-pointer font-extrabold text-lg text-slate-900"
+              class="w-full lg:w-[70%] bg-lime py-3.5 lg:py-2 px-2 hover:bg-lime/55 rounded-full cursor-pointer font-extrabold text-lg text-slate-900"
               id="calculate"
 
             >
@@ -150,19 +150,19 @@
           </div>
         </form>
       </div>
-      <div class="flex flex-col bg-slate-900 w-full gap-6 text-center p-16 pb-10 items-center justify-center  " id="results-start">
+      <div class="flex  flex-1 flex-col bg-slate-900 w-full gap-6 text-center p-16 lg:shadow-2xl lg:px-12 lg:py-19 lg:rounded-r-xl  pb-10 items-center justify-center  " id="results-start">
         <img src="assets/images/illustration-empty.svg" alt="calc" class="max-w-full w-58 h-58" />
         <h2 class="text-3xl text-white font-semibold">Results shown here</h2>
         <p class="text-slate-300">Complete the form and click “calculate repayments” to
         see what your monthly repayments would be.</p>
 
       </div>
-      <div class="flex flex-col bg-slate-900 w-full  gap-6 px-4 py-8  justify-center hidden " id="results-end">
+      <div class="flex flex-1 flex-col bg-slate-900 w-full gap-6 px-4 py-8 lg:shadow-2xl lg:px-12 lg:py-19 lg:rounded-r-xl justify-center hidden " id="results-end">
         <h1 class="text-white text-3xl font-semibold">Your results</h1>
         <p class="text-slate-300">Your results are shown below based on the information you
       provided. To adjust the results, edit the form and click “calculate
       repayments” again.</p>
-      <div class="flex flex-col gap-6  bg-gray-950/35 rounded-lg border-t-4 border-lime p-5">
+      <div class="flex flex-col gap-6 rounded-br-4xl  bg-gray-950/35 rounded-lg border-t-4 border-lime p-5">
         <div class="flex flex-col gap-3 border-b-1 border-slate-300/15 pb-4">
         <p class="text-slate-300">Your monthly repayments</p>
         <h1 class="text-4xl text-lime font-semibold" id="monthly-result"></h1>
