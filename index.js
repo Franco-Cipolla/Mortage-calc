@@ -111,6 +111,10 @@ const clear = () => {
     amountInput.classList.remove('outline-red');
     interestRateInput.classList.remove('outline-red');
     termInput.classList.remove('outline-red');
+    amountInput.classList.add('outline-slate-300');
+    interestRateInput.classList.add('outline-slate-300');
+    termInput.classList.add('outline-slate-300');
+
     info.forEach((el) => {
         el.classList.add('bg-slate-100');
         el.classList.remove('bg-red');
