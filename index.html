@@ -32,11 +32,7 @@
           <h1 class="text-slate-900 text-2xl font-bold mb-1">
             Mortgage Calculator
           </h1>
-          <a
-            href=""
-            class="underline underline-offset-2 text-slate-700 opacity-85 cursor-pointer hover:text-slate-900"
-            >Clear All</a
-          >
+          <button id="clear-all" class="underline underline-offset-2 text-slate-700 opacity-85 cursor-pointer hover:text-slate-900">Clear All</button>
         </div>
         <form>
           <div class="flex flex-col gap-1.5 mb-6">
@@ -133,17 +129,17 @@
             </div>
 
           <div class="relative mt-7">
-            <img
-              src="assets/images/icon-calculator.svg"
-              alt="Calc"
-              class="absolute top-4 left-18 lg:top-2.5 lg:left-14"
-            />
+
             <button
               type="submit"
               class="w-full lg:w-[70%] bg-lime py-3.5 lg:py-2 px-2 hover:bg-lime/55 rounded-full cursor-pointer font-extrabold text-lg text-slate-900"
               id="calculate"
 
-            >
+            ><img
+              src="assets/images/icon-calculator.svg"
+              alt="Calc"
+              class="absolute top-4 left-18 lg:top-2.5 lg:left-14"
+            />
               Calculate Repayments
             </button>
              </div>

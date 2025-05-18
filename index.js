@@ -8,6 +8,7 @@ const info = document.querySelectorAll('.info');
 const errorP = document.querySelectorAll('.errP');
 const monthlyDisplay = document.getElementById('monthly-result');
 const totalDisplay = document.getElementById('total-result');
+const clearBtn = document.getElementById('clear-all');
 
 
 
@@ -90,7 +91,33 @@ const calculateRepaymentsMonthly = () => {
     } else if (mortgageType === "interest-only") {
         monthlyPayment = amount * monthlyInterest;
     } else {
-        throw new Error("Unbekannter Darlehenstyp");
+        throw new Error("Invalid mortgage type");
     }
     return monthlyPayment;
 };
+
+clearBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    clear();
+
+})
+
+const clear = () => {
+    amountInput.value = '';
+    interestRateInput.value = '';
+    termInput.value = '';
+    beforeResult.classList.remove('hidden');
+    afterResult.classList.add('hidden');
+    amountInput.classList.remove('outline-red');
+    interestRateInput.classList.remove('outline-red');
+    termInput.classList.remove('outline-red');
+    info.forEach((el) => {
+        el.classList.add('bg-slate-100');
+        el.classList.remove('bg-red');
+        el.classList.add('text-slate-900');
+        el.classList.remove('text-white');
+    });
+    errorP.forEach((el) => {
+        el.classList.add('hidden');
+    });
+}
